@@ -5,7 +5,7 @@ const zip = (a, b) => a.map((k, i) => [k, b[i]]);
 function parse(input: string) {
     return input
         .split("\n")
-        .filter((line) => !!line)
+        .filter((line) => line)
         .map(line => line.split("   ").map(num => parseInt(num)))
         .reduce((acc: Data, nums: number[]) => {
             acc.left.push(nums[0]);
